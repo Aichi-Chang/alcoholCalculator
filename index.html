@@ -7,17 +7,26 @@
   <link href='styles/main.css' type="text/css">
 </head>
 <body>
+
+
   <form>
     <lable>Alcohol Percentage</lable>
-    <input type="text" id="alcoholPercent" name="alcoholPercent">
-    <lable>Alcohol Volumn</lable>
-    <input type="text" id="alcoholVolume" name="alcoholVolume">
-    <select id='volume'>
+    <input type="number" id="alcoholPercent" name="alcoholPercent">
+    <lable>Alcohol Volume(ml)</lable>
+    <input type="number" id="alcoholVolume" name="alcoholVolume">
+    <!-- <select id='volume'>
       <option value="ml">ML</option>
       <option value="pint">Pint</option>
       <option value="cc">CC</option>
-    </select>
+    </select> -->
+    <button type="button" id='button'>How much water I need</button>
   </form>
+
+  <div>You need to add <span id='output'></span>ml water to make <span id='total'></span>ml 75% rubbing alcohol.</div>
+  
+  
   <script src='src/app.js'></script>
+
+
 </body>
 </html>
