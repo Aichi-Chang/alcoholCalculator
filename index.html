@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alcohol Calculator</title>
-  <link href='styles/main.css' type="text/css">
+  <link rel="stylesheet" href="styles/main.css">
   <script src='src/app.js'></script>
 </head>
 <body>
@@ -12,7 +12,7 @@
 
   <form>
     <lable>Alcohol Percentage</lable>
-    <input type="number" id="alcoholPercent" name="alcoholPercent" id='percentage'>
+    <input type="number" id="alcoholPercent" name="alcoholPercent">
     <lable>Alcohol Volume(ml)</lable>
     <input type="number" id="alcoholVolume" name="alcoholVolume">
     <!-- <select id='volume'>
@@ -23,7 +23,7 @@
     <button type="button" id='button'>How much water I need</button>
   </form>
 
-  <div>You need to add <span id='output'></span>ml water to make <span id='total'></span>ml 75% rubbing alcohol.</div>
+  <div id='output'>You need to add <span id='water'></span>ml water to make <span id='total'></span>ml 75% rubbing alcohol.</div>
   
 
 
