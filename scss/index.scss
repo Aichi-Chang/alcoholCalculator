@@ -1,3 +1,19 @@
-// @import '_colors';
-// @import '_layout';
-// @import '_forms';
+@import url('https://fonts.googleapis.com/css?family=Poppins|Raleway&display=swap');
+
+$font-raleway:  'Raleway', sans-serif;
+$font-poppins:  'Poppins', sans-serif;
+$primary-color: powderblue;
+
+
+body {
+  background-color: $primary-color;
+}
+
+h1 {
+  font-family: $font-poppins;
+}
+
+#output {
+  visibility: hidden;
+}
+

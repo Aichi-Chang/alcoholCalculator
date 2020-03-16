@@ -1,3 +1,14 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins|Raleway&display=swap");
+body {
+  background-color: powderblue;
+}
 
+h1 {
+  font-family: "Poppins", sans-serif;
+}
+
+#output {
+  visibility: hidden;
+}
 
 /*# sourceMappingURL=main.css.map */
