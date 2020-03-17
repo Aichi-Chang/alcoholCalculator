@@ -2,11 +2,13 @@ function main() {
 
   const alcoholPercentage =  document.getElementById('alcoholPercent')
   const alcoholVolume = document.getElementById('alcoholVolume')
-  const outputTag = document.getElementById('output')
+  const outputTag = document.querySelector('.output')
+  const outputTag2 = document.querySelector('.output2')
+  const outputTag3 = document.querySelector('.output3')
   const totalTag = document.getElementById('total')
   const buttonTag = document.getElementById('button')
   const waterTag = document.getElementById('water')
-  const lowerThan75Tag = document.getElementById('lowerThan75')
+  // const lowerThan75Tag = document.getElementById('lowerThan75')
 
 
 
@@ -28,15 +30,38 @@ function main() {
     const x = (((alcoholPercentage.value / 100) * alcoholVolume.value) / 0.75) - alcoholVolume.value
     const y = x + parseFloat(alcoholVolume.value)
 
-    if (alcoholPercentage.value < 75) {
-      outputTag.style.visibility = 'hidden'
-      lowerThan75Tag.style.visibility = 'visible'
-      lowerThan75Tag.innerHTML = 'The alcohol percentage is lower than 75%'
-    } else if (x && y) {
-      lowerThan75Tag.style.visibility = 'hidden'
+    if (alcoholPercentage.value == 75) {
+      outputTag.innerHTML = 'The alcohol percentage is exactly 75%'
+      
       outputTag.style.visibility = 'visible'
-      waterTag.innerHTML = Math.floor(x)
-      totalTag.innerHTML = Math.floor(y)
+      outputTag2.style.visibility = 'hidden'
+      outputTag3.style.visibility = 'hidden'
+
+    } else if (alcoholPercentage.value < 75) {
+
+      outputTag.innerHTML = 'The alcohol percentage is lower than 75%'
+      
+      outputTag.style.visibility = 'visible'
+      outputTag2.style.visibility = 'hidden'
+      outputTag3.style.visibility = 'hidden'
+
+    } else if (x && y) {
+
+      outputTag.innerHTML = 'You need to add '
+      outputTag.style.visibility = 'visible'
+      outputTag2.style.visibility = 'visible'
+      outputTag3.style.visibility = 'visible'
+
+      var spanElemx = document.createElement('spanx')
+      var spanElemy = document.createElement('spany')
+
+      spanElemx.appendChild(document.createTextNode(Math.floor(x)))
+      outputTag.appendChild(spanElemx)
+      spanElemy.appendChild(document.createTextNode(Math.floor(y)))
+      outputTag2.appendChild(spanElemy)
+      // waterTag.innerHTML = Math.floor(x)
+      // totalTag.innerHTML = Math.floor(y)
+
     } 
 
 

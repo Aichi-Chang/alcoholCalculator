@@ -13,30 +13,45 @@ h1 {
   margin: 40px auto 80px auto;
 }
 
-#output {
+.output,
+.output2,
+.output3 {
   visibility: hidden;
 }
 
+form {
+  text-align: center;
+}
 form .inputs {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 40px;
 }
 form div {
   margin: 10px;
+  color: #367066;
 }
 form lable {
   font-family: "Raleway", sans-serif;
   font-size: 24px;
   line-height: 1.5;
 }
-form button {
+form a {
+  text-decoration: none;
   font-family: "Raleway", sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  display: flex;
-  margin: 40px auto;
+  max-width: 300px;
+  padding: 10px 20px;
+  border: 1px solid #6cd1aa;
+  border-radius: 30px;
+  color: #367066;
+  transition: background-color 0.5s ease;
+}
+form a:hover {
+  background-color: rgba(243, 233, 205, 0.568);
 }
 
 /*# sourceMappingURL=main.css.map */

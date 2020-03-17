@@ -2,10 +2,29 @@
 
 $font-raleway:  'Raleway', sans-serif;
 $font-poppins:  'Poppins', sans-serif;
+$article-color: #367066;
 $title-size: 36px;
 $article-size: 24px;
 $line-height: 1.5;
 $primary-color: powderblue;
+$primary-color2: rgb(108, 209, 170);
+
+@mixin button {
+  text-decoration: none;
+  font-family: $font-raleway;
+  font-size: 16px;
+  line-height: $line-height;
+  max-width: 300px;
+  padding: 10px 20px;
+  border: 1px solid $primary-color2;
+  border-radius: 30px;
+  color: $article-color;
+  transition: background-color .5s ease;
+  &:hover {
+    background-color: rgba(243, 233, 205, 0.568);
+  }
+}
+
 
 
 body {
@@ -22,32 +41,36 @@ h1 {
   margin: 40px auto 80px auto;
 }
 
-#output {
+.output,
+.output2,
+.output3
+{
   visibility: hidden;
 }
 
 form{
+  text-align: center;
   .inputs {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 40px;
   }
   div{
     margin: 10px;
+    color: $article-color;
   }
   lable {
     font-family: $font-raleway;
     font-size: $article-size;
     line-height: $line-height;
   }
-  button {
-    font-family: $font-raleway;
-    font-size: 16px;
-    line-height: $line-height;
-    display: flex;
-    margin: 40px auto;
+  a {
+    @include button;
   }
-
 }
 
+.answer {
+
+}
