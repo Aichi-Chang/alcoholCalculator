@@ -4,11 +4,39 @@ body {
 }
 
 h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  line-height: 1.5;
+  margin: 40px auto 80px auto;
 }
 
 #output {
   visibility: hidden;
+}
+
+form .inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+form div {
+  margin: 10px;
+}
+form lable {
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  line-height: 1.5;
+}
+form button {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  display: flex;
+  margin: 40px auto;
 }
 
 /*# sourceMappingURL=main.css.map */

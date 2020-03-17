@@ -2,6 +2,9 @@
 
 $font-raleway:  'Raleway', sans-serif;
 $font-poppins:  'Poppins', sans-serif;
+$title-size: 36px;
+$article-size: 24px;
+$line-height: 1.5;
 $primary-color: powderblue;
 
 
@@ -10,10 +13,41 @@ body {
 }
 
 h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: $font-poppins;
+  font-size: $title-size;
+  line-height: $line-height;
+  margin: 40px auto 80px auto;
 }
 
 #output {
   visibility: hidden;
+}
+
+form{
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  div{
+    margin: 10px;
+  }
+  lable {
+    font-family: $font-raleway;
+    font-size: $article-size;
+    line-height: $line-height;
+  }
+  button {
+    font-family: $font-raleway;
+    font-size: 16px;
+    line-height: $line-height;
+    display: flex;
+    margin: 40px auto;
+  }
+
 }
 
