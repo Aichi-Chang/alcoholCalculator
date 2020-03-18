@@ -28,17 +28,25 @@ function main() {
     const x = (((alcoholPercentage.value / 100) * alcoholVolume.value) / 0.75) - alcoholVolume.value
     const y = x + parseFloat(alcoholVolume.value)
 
-    if (alcoholPercentage.value == 75) {
-      outputTag.innerHTML = 'The alcohol percentage is exactly 75%'
-      
+    if (!y) { 
+
+      outputTag.innerHTML = 'There is no input.' 
       outputTag.style.visibility = 'visible'
       outputTag2.style.visibility = 'hidden'
       outputTag3.style.visibility = 'hidden'
 
+
+    } else if (alcoholPercentage.value == 75) {
+
+      outputTag.innerHTML = 'The alcohol percentage is exactly 75%'
+      outputTag.style.visibility = 'visible'
+      outputTag2.style.visibility = 'hidden'
+      outputTag3.style.visibility = 'hidden'
+
+
     } else if (alcoholPercentage.value < 75) {
 
       outputTag.innerHTML = 'The alcohol percentage is lower than 75%'
-      
       outputTag.style.visibility = 'visible'
       outputTag2.style.visibility = 'hidden'
       outputTag3.style.visibility = 'hidden'
@@ -51,7 +59,6 @@ function main() {
       outputTag2.style.visibility = 'visible'
       outputTag3.style.visibility = 'visible'
 
-      
       outputTag.appendChild(document.createTextNode(Math.ceil(x)))
       outputTag.appendChild(document.createTextNode('ml'))
       outputTag.appendChild(document.createTextNode('\u00A0'))
