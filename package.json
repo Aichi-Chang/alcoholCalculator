@@ -4,10 +4,13 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "chai": "^4.2.0",
     "node-sass": "^4.13.1",
     "sass": "^1.26.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "^7.1.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass --watch scss/index.scss:styles/main.css"
