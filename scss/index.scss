@@ -19,10 +19,18 @@ $primary-color2: rgb(108, 209, 170);
   border: 1px solid $primary-color2;
   border-radius: 30px;
   color: $article-color;
+  z-index: 2;
   transition: background-color .5s ease;
   &:hover {
     background-color: rgba(243, 233, 205, 0.568);
   }
+}
+
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -32,9 +40,7 @@ body {
 }
 
 h1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flexCenter;
   font-family: $font-poppins;
   font-size: $title-size;
   line-height: $line-height;
@@ -51,10 +57,8 @@ h1 {
 form{
   text-align: center;
   .inputs {
-    display: flex;
+    @include flexCenter;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin-bottom: 40px;
   }
   div{
@@ -72,5 +76,10 @@ form{
 }
 
 .answer {
-
+  max-width: 800px;
+  display: flex;
+  color: $primary-color2;
+  font-family: $font-poppins;
+  font-size: 32px;
 }
+

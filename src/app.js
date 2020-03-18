@@ -5,10 +5,8 @@ function main() {
   const outputTag = document.querySelector('.output')
   const outputTag2 = document.querySelector('.output2')
   const outputTag3 = document.querySelector('.output3')
-  const totalTag = document.getElementById('total')
   const buttonTag = document.getElementById('button')
-  const waterTag = document.getElementById('water')
-  // const lowerThan75Tag = document.getElementById('lowerThan75')
+
 
 
 
@@ -45,25 +43,23 @@ function main() {
       outputTag2.style.visibility = 'hidden'
       outputTag3.style.visibility = 'hidden'
 
-    } else if (x && y) {
+    } else if (alcoholPercentage.value > 75) {
 
       outputTag.innerHTML = 'You need to add '
+      outputTag2.innerHTML = ' water to make '
       outputTag.style.visibility = 'visible'
       outputTag2.style.visibility = 'visible'
       outputTag3.style.visibility = 'visible'
 
-      var spanElemx = document.createElement('spanx')
-      var spanElemy = document.createElement('spany')
+      
+      outputTag.appendChild(document.createTextNode(Math.ceil(x)))
+      outputTag.appendChild(document.createTextNode('ml'))
+      outputTag.appendChild(document.createTextNode('\u00A0'))
 
-      spanElemx.appendChild(document.createTextNode(Math.floor(x)))
-      outputTag.appendChild(spanElemx)
-      spanElemy.appendChild(document.createTextNode(Math.floor(y)))
-      outputTag2.appendChild(spanElemy)
-      // waterTag.innerHTML = Math.floor(x)
-      // totalTag.innerHTML = Math.floor(y)
-
+      outputTag2.appendChild(document.createTextNode(Math.ceil(y)))
+      outputTag2.appendChild(document.createTextNode('ml'))
+      outputTag2.appendChild(document.createTextNode('\u00A0'))
     } 
-
 
     // console.log(typeof(alcoholVolume.value))
   })

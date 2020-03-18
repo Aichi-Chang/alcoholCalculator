@@ -5,8 +5,8 @@ body {
 
 h1 {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   font-family: "Poppins", sans-serif;
   font-size: 36px;
   line-height: 1.5;
@@ -24,9 +24,9 @@ form {
 }
 form .inputs {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   margin-bottom: 40px;
 }
 form div {
@@ -48,10 +48,19 @@ form a {
   border: 1px solid #6cd1aa;
   border-radius: 30px;
   color: #367066;
+  z-index: 2;
   transition: background-color 0.5s ease;
 }
 form a:hover {
   background-color: rgba(243, 233, 205, 0.568);
+}
+
+.answer {
+  max-width: 800px;
+  display: flex;
+  color: #6cd1aa;
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
 }
 
 /*# sourceMappingURL=main.css.map */
