@@ -71,8 +71,11 @@ function main() {
     // console.log(typeof(alcoholVolume.value))
   })
 
+  function log() {
+    console.log('hello world')
+  }
 
-
+  module.exports = { log }
 
 }
 
