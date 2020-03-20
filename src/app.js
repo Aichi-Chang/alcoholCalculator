@@ -74,4 +74,15 @@ function main() {
 
 }
 
+function testFunc () {
+  console.log('Hello')
+}
+
+
+module.exports = { testFunc }
+
+if (!module.parent) {
+  testFunc()
+}
+
 // window.addEventListener('DOMContentLoaded', main)
