@@ -68,6 +68,8 @@ function main() {
       outputTag2.appendChild(document.createTextNode('\u00A0'))
     } 
 
+    console.log('hola')
+
     // console.log(typeof(alcoholVolume.value))
   })
 
@@ -79,10 +81,11 @@ function testFunc () {
 }
 
 
-module.exports = { testFunc }
+module.exports = { testFunc, main }
 
 if (!module.parent) {
   testFunc()
+  main()
 }
 
 // window.addEventListener('DOMContentLoaded', main)
