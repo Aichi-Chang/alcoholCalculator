@@ -22,13 +22,23 @@ it('should return true', () => {
   assert.equal(true, true)
 })
 
-it('logs Hello', () => {
-  const log = sinon.spy(console, 'log')
-  testFunc()
-  if (!log.calledOnceWith('Hello')) {
-    throw new Error('Log was not called')
-  }
+describe('blahhhh', function() {
+
+  it('logs Hello', () => {
+    const log = sinon.spy(console, 'log')
+    testFunc()
+    if (!log.calledOnceWith('Hello')) {
+      throw new Error('Log was not called')
+    }
+    // sinon.assert.calledWith(log, 'Hello')
+  })
+
+  
+
 })
+
+
+
 
 // describe('testFunc', function() {
 //   it('should call subscribers on publish', function() {
@@ -40,18 +50,19 @@ it('logs Hello', () => {
 //   })
 // })
 
-before(function() {
-  global.document = { addEventListener: sinon.stub() }
-  global.self = { emit: sinon.stub() }
+// before(function() {
+//   global.document = { addEventListener: sinon.stub() }
+//   global.self = { emit: sinon.stub() }
 
-  main()
+//   main()
 
-  this.callback =  document.addEventListener.getCalls()[0].args[1]
-  this.eventType = document.addEventListener.getCalls()[0].args[1]
-})
+//   this.callback =  document.addEventListener.getCalls()[0].args[1]
+//   this.eventType = document.addEventListener.getCalls()[0].args[1]
+// })
 
-it('should use appropriate args', function() {
-  this.eventType.should.eql('chang')
-  this.callback.should.be.a('function')
-})
+// it('should use appropriate args', function() {
+//   this.eventType.should.eql('chang')
+//   this.callback.should.be.a('function')
+// })
+
 
