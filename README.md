@@ -1,7 +1,15 @@
-### How to make 75% alcohol ###
+### 🤯 How to make 75% alcohol ###
 
 
-This is a small application helping you to calculate how much water you need to add into an ***over*** 75% alcohol(eg. 90%).
+This is a small application helping you to calculate how much water you need to add into an ***over*** 75% alcohol(eg. 90%). 
+
+#Covid19
+
+#Washyourhands
+
+#Stayhomestayhealthy
+
+
 
 
 ### 🕹 Technologies used ###
