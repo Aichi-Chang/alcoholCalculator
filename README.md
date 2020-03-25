@@ -3,7 +3,7 @@
 
 This is a small application helping you to calculate how much water you need to add into an ***over*** 75% alcohol(eg. 90%). 
 
-**Give it a go here:** https://aichi-chang.github.io/alcoholCalculator/
+[Give it a go here](https://aichi-chang.github.io/alcoholCalculator/)
 
 #Covid19
 
