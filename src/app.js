@@ -12,7 +12,7 @@ function main() {
 
   alcoholPercentage.addEventListener('change', (input) => {    
     if (input.target.valueAsNumber < 0) input.target.valueAsNumber = 0
-    if (input.target.valueAsNumber > 100) input.target.valueAsNumber = 100 
+    if (input.target.valueAsNumber > 100) input.target.valueAsNumber = 100
     // console.log(input.target.valueAsNumber)
   })
 
@@ -74,15 +74,5 @@ function main() {
 }
 
 
-function testFunc () {
-  console.log('Hello')
-}
-
-
-module.exports = { testFunc }
-
-if (!module.parent) {
-  testFunc()
-}
 
 // window.addEventListener('DOMContentLoaded', main)
